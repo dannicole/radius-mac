@@ -7,7 +7,7 @@ A simple RADIUS server for MAC-authentication.
 # standard build
 make
 
-# build for mipsel (eg. UniFi EdgeRouter X)
+# build for mipsel (eg. Ubiquiti EdgeRouter X)
 make mipsel
 ```
 
