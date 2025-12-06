@@ -9,6 +9,9 @@ make
 
 # build for mipsel (eg. Ubiquiti EdgeRouter X)
 make mipsel
+
+# build for mips (eg. Ubiquiti EdgeRouter 4 or 6P)
+make mips
 ```
 
 ## Install
