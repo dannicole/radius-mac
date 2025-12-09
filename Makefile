@@ -19,5 +19,13 @@ mips:
 	docker run --rm -v $(shell pwd)/src:/src -w /src $(MIPS_IMAGE) \
 		make CC=mips-linux-gnu-gcc clean radius-mac
 
+debian: clean all
+	@$(MAKE) -C debian all
 
-.PHONY: all clean mipsel mips
+debian-mipsel: mipsel
+	@$(MAKE) VERSION_SUFFIX=-v3-e50 ARCH=mipsel -C debian all
+
+debian-mips: mips
+	@$(MAKE) VERSION_SUFFIX=-v3-e300 ARCH=mips -C debian all
+
+.PHONY: all clean mipsel mips debian debian-mipsel debian-mips
